@@ -9,12 +9,36 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var _usuario: String = "";
+    var _contrasenna: String = "";
+    var usuarioregistrado = [String]();
+    
+    @IBAction func tohome(_ sender: Any) {
+        if(usuarioregistrado[0] == "manolo" && usuarioregistrado[1] == "1234"){
+        performSegue(withIdentifier: "logintohome", sender: sender)
+        }
+    }
+    
+    @IBOutlet weak var usuario: UITextField!
+    
+    @IBOutlet weak var contrasenna: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        asignarCampos()
+        crearUsuarioRegistrado()
     }
-
-
+    func asignarCampos()
+    {
+        usuario.text = _usuario;
+        contrasenna.text = _contrasenna;
+    }
+    func crearUsuarioRegistrado()
+    {
+        usuarioregistrado[0] = "manolo";
+        usuarioregistrado[1] = "1234";
+    }
+    
+    
 }
 
