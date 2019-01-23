@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         asignarCampos()
         crearUsuarioRegistrado()
+        print(usuarioregistrado)
     }
     func asignarCampos()
     {
@@ -35,8 +36,8 @@ class ViewController: UIViewController {
     }
     func crearUsuarioRegistrado()
     {
-        usuarioregistrado[0] = "manolo";
-        usuarioregistrado[1] = "1234";
+        usuarioregistrado.append(_usuario) ;
+        usuarioregistrado.append(_contrasenna);
     }
     
     

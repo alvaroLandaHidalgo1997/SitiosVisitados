@@ -24,7 +24,6 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         let span = MKCoordinateSpanMake(0.02, 0.02)
         let region = MKCoordinateRegion(center: localizacion.coordinate, span: span)
         map.setRegion(region, animated: true)
-        
         let anotacion = MKPointAnnotation()
         anotacion.coordinate = localizacion.coordinate
         anotacion.title = "Sitio"
@@ -32,7 +31,6 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         map.addAnnotation(anotacion)
     }
     let manager = CLLocationManager()
-    
     func locationManager(_ manager: CLLocationManager,
                          didChangeAuthorization status: CLAuthorizationStatus) {
         manager.startUpdatingLocation()

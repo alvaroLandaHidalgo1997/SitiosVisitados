@@ -11,13 +11,12 @@ import UIKit
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var usuario: UITextField!
-    
     @IBOutlet weak var contrasennaconfirmada: UITextField!
     @IBOutlet weak var contrasenna: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBAction func Registrarse(_ sender: Any)
     {
-        
+        dismiss(animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
